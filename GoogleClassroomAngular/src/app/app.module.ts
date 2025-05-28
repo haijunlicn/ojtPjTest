@@ -18,6 +18,7 @@ import { Sidebar2Component } from './layout/sidebar2/sidebar2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ChatFileUploadComponent } from './groupchat/chat-file-upload/chat-file-upload.component';
+import { GitTestingComponent } from './git-testing/git-testing.component';
 
 
 
@@ -34,7 +35,8 @@ import { ChatFileUploadComponent } from './groupchat/chat-file-upload/chat-file-
     GroupchatListComponent,
     ChattingPageComponent,
     Sidebar2Component,
-    ChatFileUploadComponent
+    ChatFileUploadComponent,
+    GitTestingComponent
   ],
   imports: [
     BrowserModule,
