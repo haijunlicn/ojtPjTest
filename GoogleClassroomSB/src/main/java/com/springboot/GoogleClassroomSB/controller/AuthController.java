@@ -49,6 +49,9 @@ public class AuthController {
     public ResponseEntity<UserDTO> getCurrentUser(@RequestHeader("Authorization") String authHeader) {
         UserDTO userDTO = authService.getCurrentUser(authHeader);
         return ResponseEntity.ok(userDTO);
+        // HI MayKabyarNiang
     }
+
+
 
 }
