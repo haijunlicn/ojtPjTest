@@ -37,6 +37,7 @@ import { GitTestingComponent } from './git-testing/git-testing.component';
     Sidebar2Component,
     ChatFileUploadComponent,
     GitTestingComponent
+    ChatFileUploadComponent
   ],
   imports: [
     BrowserModule,
