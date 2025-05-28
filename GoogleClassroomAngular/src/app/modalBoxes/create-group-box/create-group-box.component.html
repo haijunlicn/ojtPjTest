@@ -1,0 +1,65 @@
+<!-- <div *ngIf="isOpen" class="modal-backdrop fade show"></div>s
+
+<div *ngIf="isOpen" class="modal fade show" tabindex="-1" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Group Chat</h5>
+        <button type="button" class="btn-close" (click)="close()"></button>
+      </div>
+      <div class="modal-body">
+        <input [(ngModel)]="group.name" type="text" class="form-control" placeholder="Enter Group Name">
+        <div *ngIf="errorMessage" class="error text-danger">
+          {{ errorMessage }}
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="onCreateGroup()">Create</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div *ngIf="isOpen" class="modal-backdrop fade show"></div>
+
+<div *ngIf="isOpen" class="modal fade show" tabindex="-1" style="display: block;">
+  <div class="modal-dialog">
+    
+    <form #groupForm="ngForm" (ngSubmit)="onCreateGroup()" novalidate>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Group Chat</h5>
+          <button type="button" class="btn-close" (click)="close()"></button>
+        </div>
+
+        <div class="modal-body">
+          <input [(ngModel)]="group.name" name="groupName" #groupNameInput="ngModel" type="text" class="form-control"
+            placeholder="Enter Group Name" required />
+
+          <!-- Validation message -->
+          <div *ngIf="groupNameInput.invalid && groupNameInput.touched" class="text-danger mt-1">
+            Group name is required.
+          </div>
+
+          <!-- Server-side or other error -->
+          <div *ngIf="errorMessage" class="text-danger mt-1">
+            {{ errorMessage }}
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="reset" class="btn btn-secondary" (click)="close()">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="groupForm.invalid">
+            Create
+          </button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

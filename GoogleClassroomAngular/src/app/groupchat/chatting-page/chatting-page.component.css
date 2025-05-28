@@ -1,0 +1,373 @@
+.chat-main {
+  padding: 0;
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+
+.online-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+
+.message-wrapper {
+  max-width: 94%;
+}
+
+.message-bubble {
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.justify-content-end .message-bubble {
+  background-color: #103838; /* sent by user */
+}
+
+.justify-content-start .message-bubble {
+  background-color: #333649; /* received */
+}
+
+.avatar-img {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-input-container {
+  border-top: 1px solid #2b2d3a;
+}
+
+.chat-input-container .form-control {  
+  border: none;
+}
+
+.chat-input-container .form-control:focus {
+  box-shadow: none;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.chat-header {
+  border-bottom: 1px solid #2b2d3a;
+}
+
+.dark-input {
+  background-color: #2b2d3a !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+}
+
+.dark-input::placeholder {
+  color: #a0aec0;
+}
+
+.dark-input:focus {
+  background-color: #2b2d3a;
+  color: #ffffff;
+  box-shadow: none;
+  outline: none;
+}
+
+.group-avatar {
+  width: 38px;
+  height: 38px;
+  background-color: #333649;
+  border: 1px solid #44475a;
+  border-radius: 50%;
+  color: #e0e0e0;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #20c997;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.btn-outline-secondary {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #333649;
+
+}
+
+.btn i {
+  font-size: 14px;
+}
+
+.typing-indicator {
+  font-style: italic;
+  user-select: none;
+  opacity: 0.7;
+  color: #a0aec0;
+}
+
+.typing-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  margin-left: 6px;
+}
+
+.typing-dots span {
+  width: 5px;
+  height: 5px;
+  margin: 0 1.5px;
+  background-color: currentColor;
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: 0s; }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.3; }
+  40% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .message-wrapper {
+    max-width: 85%;
+  }
+
+  .chat-messages {
+    height: calc(100vh - 170px) !important;
+  }
+}
+
+.bubble-sent {
+  background-color: #1a73e8; /* bright blue */
+  color: #fff;
+}
+
+.bubble-received {
+  background-color: #2a2d3a;
+  color: #e0e0e0;
+}
+
+.message-header strong {
+  color: #b0bec5;
+}
+
+.message-footer small {
+  color: #7a7f9a;
+}
+
+.avatar-img {
+  background-color: #333649 !important;
+  color: #e0e0e0 !important;
+  border: none;
+}
+
+.text-muted {
+  color: #7a7f9a !important;
+}
+
+.text-dark {
+  color: #e0e0e0 !important;
+}
+
+
+
+/* Add these styles to your component's CSS file */
+
+.message-options-box {
+  position: absolute;
+  z-index: 1000;
+  background-color: #141a24; /* Dark blue background to match your theme */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  min-width: 180px;
+  overflow: hidden;
+  animation: fadeIn 0.2s ease-out;
+  border: none;
+  padding: 8px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.message-options-arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #141a24; /* Match the box background */
+  transform: rotate(45deg);
+  z-index: 999;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-left {
+  left: -6px;
+  top: 15px;
+}
+
+.arrow-right {
+  right: -6px;
+  top: 15px;
+}
+
+.message-options-content {
+  position: relative;
+  z-index: 1001;
+  background-color: #141a24; /* Match the box background */
+  border-radius: 12px;
+}
+
+.message-option {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  color: #e9ecef; /* Light text color from your theme */
+}
+
+.message-option:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle light hover effect */
+}
+
+.message-option.text-danger {
+  color: #ff6b6b; /* Softer red for dark background */
+}
+
+.message-option.text-danger:hover {
+  background-color: rgba(255, 107, 107, 0.1); /* Subtle red hover effect */
+}
+
+.option-icon {
+  margin-right: 12px;
+  font-size: 16px;
+  width: 20px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* .attachment-image {
+  margin-top: 4px;
+  max-width: 200px;
+  max-height: 150px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.attachment-item {
+  max-width: 200px;
+} */
+
+/* Container for all attachments */
+.attachment-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Each individual attachment block */
+.attachment-item {
+  max-width: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Image preview */
+.attachment-image {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.attachment-image:hover {
+  transform: scale(1.03);
+}
+
+/* File link for non-image files */
+.attachment-link {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.attachment-link:hover {
+  text-decoration: underline;
+}
+
+/* Optional: custom icon spacing */
+.attachment-link i {
+  font-size: 1.1rem;
+}

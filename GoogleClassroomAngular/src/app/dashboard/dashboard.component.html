@@ -1,0 +1,65 @@
+<div class="v0-dashboard-container" (click)="onBackgroundClick($event)">
+
+    <!-- Sidebar (toggleable) -->
+    <app-sidebar2 [sidebarOpen]="sidebarOpen" (closeSidebar)="closeSidebar()">
+    </app-sidebar2>
+
+    <!-- Main layout -->
+    <div class="v0-main-content" [class.v0-sidebar-open]="sidebarOpen">
+        <!-- Top navbar -->
+        <div class="v0-navbar">
+            <button class="v0-toggle-button" (click)="toggleSidebar()">
+                <i class="bi bi-list"></i>
+            </button>
+            <h2>Group Chat</h2>
+        </div>
+
+        <div class="v0-content-wrapper">
+            <!-- Left side: Group List -->
+            <div class="v0-group-list">
+                <div class="v0-group-actions">
+                    <button class="v0-create-btn" (click)="openCreateGroupModal()">
+                        <i class="bi bi-plus-circle"></i> Create Group
+                    </button>
+                    <button class="v0-join-btn" (click)="openJoinGroupModal()">
+                        <i class="bi bi-box-arrow-in-right"></i> Join Group
+                    </button>
+                </div>
+
+                <app-groupchat-list [title]="'Created Groups'" [role]="'creator'"
+                    [selectedGroupId]="selectedGroup?.id || null" [groups]="currentUser?.createdGroups || []"
+                    (groupSelected)="onGroupSelected($event)">
+                </app-groupchat-list>
+
+                <app-groupchat-list [title]="'Joined Groups'" [role]="'member'"
+                    [selectedGroupId]="selectedGroup?.id || null" [groups]="currentUser?.joinedGroups || []"
+                    (groupSelected)="onGroupSelected($event)">
+                </app-groupchat-list>
+
+            </div>
+
+            <!-- Right side: Chat Area -->
+            <div class="v0-chat-area">
+                <ng-container *ngIf="selectedGroup; else placeholder">
+                    <app-chatting-page [selectedGroup]="selectedGroup">
+                    </app-chatting-page>
+                </ng-container>
+
+                <ng-template #placeholder>
+                    <div class="v0-chat-placeholder">
+                        <div class="v0-placeholder-icon">
+                            <i class="bi bi-chat-square-text"></i>
+                        </div>
+                        <h3>Select a group to start chatting</h3>
+                        <p>Your messages will appear here</p>
+                    </div>
+                </ng-template>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Include modals -->
+<app-create-group-box (groupCreated)="reloadGroupchats('create')"></app-create-group-box>
+<app-join-group-box (groupJoined)="reloadGroupchats('join')"></app-join-group-box>

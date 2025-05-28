@@ -1,0 +1,34 @@
+<div class="v0-group-section">
+  <h4>{{ title }}</h4>
+  <div class="v0-group-items">
+    <div *ngFor="let group of groups" class="v0-group-item" (click)="onGroupClick(group)"
+        [class.selected]="group.id === selectedGroupId">
+      <div class="v0-group-avatar">
+        <span>{{ group.name.charAt(0) }}</span>
+      </div>
+
+      <div class="v0-group-details">
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <h5 class="mb-0">{{ group.name }}</h5>
+          <span class="role-badge" [ngClass]="{
+              'owner': role === 'creator',
+              'member': role === 'member'
+            }">
+            {{ role === 'creator' ? 'Owner' : 'Member' }}
+          </span>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center join-code-row">
+          <small class="join-code-text">Code: {{ group.joinCode }}</small>
+          <button class="copy-btn" (click)="copyToClipboard(group.joinCode)">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!groups.length" class="v0-empty-state">
+      No groups  {{ role === 'creator' ? 'created' : 'joined' }} yet
+    </div>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* File Upload Styles */
+.file-list {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0;
+}
+
+.file-item {
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	margin-bottom: 8px;
+	background-color: #f8f9fa;
+	border: 1px solid #e9ecef;
+	border-radius: 4px;
+	transition: background-color 0.2s;
+}
+
+.file-item:hover {
+	background-color: #e9ecef;
+}
+
+.file-item-icon {
+	margin-right: 12px;
+	font-size: 1.2rem;
+	color: #6c757d;
+	width: 24px;
+	text-align: center;
+}
+
+.file-item-details {
+	flex: 1;
+	overflow: hidden;
+}
+
+.file-item-name {
+	font-weight: 500;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.file-item-size, .file-item-url {
+	font-size: 0.8rem;
+	color: #6c757d;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.file-item-remove {
+	background: none;
+	border: none;
+	color: #dc3545;
+	cursor: pointer;
+	padding: 4px;
+	margin-left: 8px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.2s;
+}
+
+.file-item-remove:hover {
+	background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Link item specific styles */
+.link-item .file-item-icon {
+	color: #007bff;
+}
+
+/* Drag and drop styles */
+#announcement-editor-container.drag-over {
+	border: 2px dashed #007bff;
+	background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Toast styles */
+.toast {
+	z-index: 1050;
+}
+
+/* Editor toolbar button styles */
+.toolbar-btn {
+	background: none;
+	border: none;
+	color: #6c757d;
+	cursor: pointer;
+	padding: 6px 10px;
+	border-radius: 4px;
+	transition: background-color 0.2s;
+}
+
+.toolbar-btn:hover {
+	background-color: #e9ecef;
+	color: #495057;
+}
+
+.toolbar-btn:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Link modal styles */
+.link-form-group {
+	margin-bottom: 1rem;
+}
+
+.link-form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
+.link-form-group input, .link-form-group textarea {
+	width: 100%;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.link-form-group input:focus, .link-form-group textarea:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.link-form-group textarea {
+	resize: vertical;
+	min-height: 100px;
+}

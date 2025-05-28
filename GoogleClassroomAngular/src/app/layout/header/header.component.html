@@ -1,0 +1,60 @@
+<nav class="sb-topnav navbar navbar-expand gc-topnav" style="padding-left: 15px">
+
+	<!-- Sidebar Toggle-->
+	<button class="btn btn-link gc-toggle" id="sidebarToggle" (click)="toggleSidebar()" href="#!">
+		<i class="fas fa-bars"></i>
+	</button>
+
+	<!-- Navbar Brand-->
+	<a class="navbar-brand gc-brand" href="${pageContext.request.contextPath}/dashboard"> <svg class="gc-logo"
+			xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1967D2">
+			<path
+				d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+		</svg> Classroom
+	</a>
+
+	<!-- Navbar Search-->
+	<div class="d-none d-md-flex ms-auto me-0 me-md-3 my-2 my-md-0 gc-search">
+		<div class="input-group position-relative">
+			<i class="fas fa-search gc-search-icon"></i> <input class="gc-search-input" type="text"
+				placeholder="Search for classes" />
+		</div>
+	</div>
+
+	<!-- Navbar Icons-->
+	<div class="d-flex align-items-center">
+		<!-- Help Icon -->
+		<div class="gc-icon-btn">
+			<i class="fas fa-question-circle"></i>
+		</div>
+
+		<!-- Settings Icon -->
+		<div class="gc-icon-btn">
+			<i class="fas fa-cog"></i>
+		</div>
+
+		<!-- Apps Icon -->
+		<div class="gc-icon-btn">
+			<i class="fas fa-th"></i>
+		</div>
+
+		<ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownUser" href="#"
+					role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<i class="fas fa-user fa-fw"></i>
+				</a>
+				<ul class="gc-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
+					<li><a class="dropdown-item" href="#!">Settings</a></li>
+					<li><a class="dropdown-item" href="#!">Activity Log</a></li>
+					<li>
+						<hr class="dropdown-divider" />
+					</li>
+					<li>
+						<button class="dropdown-item" type="button" (click)="onLogout()">Logout</button>
+					</li>
+
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>

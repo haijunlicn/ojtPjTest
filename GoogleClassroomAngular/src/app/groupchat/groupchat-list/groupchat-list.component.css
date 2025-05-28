@@ -1,0 +1,76 @@
+.v0-group-item {
+  display: flex;
+  gap: 6px;
+  background-color: #1e1f2b;
+  padding: 8px; /* reduced from 10px */
+  border-radius: 6px; /* slightly tighter corners */
+  margin-bottom: 6px; /* reduced spacing between cards */
+  color: #e0e0e0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+}
+
+.v0-group-item.selected {
+  background-color: transparent; /* slightly brighter than default */
+  box-shadow: 0 0 3px rgba(138, 180, 248, 0.2); /* soft glow */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border-left: 2px solid #124244;
+}
+
+.v0-group-avatar {
+  background-color: #333649;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px; /* reduced from 48px */
+  height: 40px;
+  font-size: 1rem; /* reduced from 1.25rem */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v0-group-details {
+  flex: 1;
+}
+
+.role-badge {
+  font-size: 0.7rem; /* slightly smaller */
+  padding: 1px 6px; /* reduced padding */
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.role-badge.owner {
+  background-color: #103838;
+  color: #fff;
+}
+
+.role-badge.member {
+  background-color: #283341;
+  color: #fff;
+}
+
+.join-code-row {
+  margin-top: 4px; /* reduced top margin */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.join-code-text {
+  color: #a0aec0;
+  font-size: 0.75rem; /* reduced font size */
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: #8ab4f8;
+  cursor: pointer;
+  font-size: 0.9rem; /* slightly smaller */
+}
+
+.copy-btn:hover {
+  color: #ffffff;
+}

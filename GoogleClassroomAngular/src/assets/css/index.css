@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* Overall Card Style */
+.custom-card {
+	border: none;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card {
+	border: none;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+	position: relative; /* Ensure it stays in place */
+}
+
+/* Card Body Style */
+.custom-card-body {
+	background: #f4f7fa;
+	color: #333;
+	border-radius: 10px;
+	padding: 20px;
+	position: relative;
+}
+
+/* Title Style */
+.custom-title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: #5c6bc0;
+	margin-bottom: 10px;
+	transition: color 0.3s ease;
+}
+
+.custom-title:hover {
+	color: #3f51b5;
+}
+
+/* Subject Style */
+.custom-subject {
+	font-size: 1.1rem;
+	color: #607d8b;
+	margin-bottom: 10px;
+}
+
+/* Info Style */
+.custom-info {
+	font-size: 0.9rem;
+	color: #9e9e9e;
+}
+
+.custom-info i {
+	color: #5c6bc0;
+}
+
+/* Card Footer Style */
+.custom-footer {
+	background-color: #eeeeee;
+	border-radius: 0 0 10px 10px;
+	padding: 15px;
+	text-align: center;
+}
+
+/* Link Style */
+.custom-link {
+	font-weight: bold;
+	color: #3f51b5;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+	color: #2196f3;
+}
+
+
+/* 
+Styling the 3-dot icon
+.dropdown i {
+	font-size: 1.5rem;
+	color: #5c6bc0;
+	cursor: pointer;
+	position: relative; Ensure it's positioned relative to its parent
+	z-index: 10; Bring the icon above other content
+}
+
+Dropdown Menu
+.dropdown-menu {
+	border-radius: 5px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 0.5rem 0;
+	min-width: 150px;
+	z-index: 1050; Ensure the dropdown menu is above other content
+	position: absolute;
+	Make sure it is positioned relative to the dropdown button
+}
+
+Dropdown Item Style
+.dropdown-item {
+	padding: 10px 20px;
+	cursor: pointer;
+	color: #333;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+	background-color: #f4f7fa;
+}
+
+Optional: Mobile responsive styling
+@media ( max-width : 576px) {
+	.dropdown i {
+		font-size: 1.3rem;
+	}
+} */

@@ -1,0 +1,100 @@
+<div class="v0-auth-container">
+  <div class="v0-auth-card">
+    <div class="v0-auth-header">
+      <i class="bi bi-person-plus-fill v0-auth-icon"></i>
+      <h1>Create Account</h1>
+      <p>Join our community and start chatting</p>
+    </div>
+    
+    <form 
+      #registerForm="ngForm"
+      (ngSubmit)="registerUser()"
+      class="v0-auth-form"
+    >
+      <!-- Name Field -->
+      <div class="v0-form-group">
+        <label for="name" class="v0-form-label">Name</label>
+        <div class="v0-input-wrapper">
+          <i class="bi bi-person v0-input-icon"></i>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="formData.name"
+            required
+            class="v0-form-control"
+            placeholder="Enter your name"
+            #name="ngModel"
+          />
+        </div>
+        <div *ngIf="registerForm.submitted && name.invalid" class="v0-form-error">
+          Name is required
+        </div>
+      </div>
+
+      <!-- Email Field -->
+      <div class="v0-form-group">
+        <label for="email" class="v0-form-label">Email</label>
+        <div class="v0-input-wrapper">
+          <i class="bi bi-envelope v0-input-icon"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+            email
+            class="v0-form-control"
+            placeholder="Enter your email"
+            #email="ngModel"
+          />
+        </div>
+        <div *ngIf="registerForm.submitted && email.invalid" class="v0-form-error">
+          Valid email is required
+        </div>
+      </div>
+
+      <!-- Password Field -->
+      <div class="v0-form-group">
+        <label for="password" class="v0-form-label">Password</label>
+        <div class="v0-input-wrapper">
+          <i class="bi bi-lock v0-input-icon"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="formData.password"
+            required
+            minlength="3"
+            class="v0-form-control"
+            placeholder="Create a password"
+            #password="ngModel"
+          />
+        </div>
+        <div *ngIf="registerForm.submitted && password.invalid" class="v0-form-error">
+          Password must be at least 3 characters
+        </div>
+      </div>
+
+      <!-- Error message -->
+      <div class="v0-form-error-message" *ngIf="errorMessage">
+        <i class="bi bi-exclamation-triangle"></i>
+        {{ errorMessage }}
+      </div>
+
+      <!-- Submit button -->
+      <button
+        type="submit"
+        class="v0-btn v0-btn-primary v0-btn-block"
+        [disabled]="registerForm.invalid"
+      >
+        <i class="bi bi-check2-circle"></i> Create Account
+      </button>
+      
+      <!-- Login link -->
+      <div class="v0-auth-footer">
+        <p>Already have an account? <a routerLink="/auth/login" class="v0-auth-link">Sign In</a></p>
+      </div>
+    </form>
+  </div>
+</div>

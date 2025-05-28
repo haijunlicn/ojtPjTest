@@ -1,0 +1,77 @@
+/* .modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+} */
+
+.modal-content {
+  background-color: #1e1e2f; /* Dark bluish background */
+  color: #ffffff;            /* Light text */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: #2c2c3c; /* Slightly lighter border for header/footer */
+}
+
+.modal-title {
+  color: #ffffff;
+}
+
+.btn-close {
+  filter: invert(1); /* Makes close button visible on dark bg */
+}
+
+.form-control {
+  background-color: #2a2a3b;
+  color: #ffffff;
+  border: 1px solid #3a3a4a;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #11122b, #111235);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #111235, #11122b);
+}
+
+.btn-secondary {
+  background-color: #2e2e3e;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: #3d3d4f;
+}
+
+.modal-content {
+  background-color: #1e1f2a;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+.error.text-danger {
+  color: #ff6b6b;
+}

@@ -1,0 +1,140 @@
+.v0-welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0a0e14;
+  padding: 20px;
+}
+
+.v0-welcome-card {
+  background-color: #141a24;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.v0-welcome-header {
+  margin-bottom: 30px;
+}
+
+.v0-welcome-icon {
+  font-size: 48px;
+  color: #3a7bd5;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.v0-welcome-header h1 {
+  color: #e9ecef;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.v0-welcome-header p {
+  color: #a0aec0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.v0-welcome-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.v0-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.v0-btn i {
+  font-size: 16px;
+}
+
+.v0-btn-primary {
+  background-color: #1c2433;
+  color: #e9ecef;
+}
+
+.v0-btn-primary:hover {
+  background-color: #1e2a3a;
+  color: #3a7bd5;
+}
+
+.v0-btn-outline {
+  background-color: transparent;
+  color: #a0aec0;
+  border: 1px solid #1e293b;
+}
+
+.v0-btn-outline:hover {
+  background-color: #1c2433;
+  color: #e9ecef;
+}
+
+.v0-divider {
+  display: flex;
+  align-items: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.v0-divider::before,
+.v0-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #1e293b;
+}
+
+.v0-divider span {
+  padding: 0 10px;
+}
+
+.v0-welcome-footer {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .v0-welcome-card {
+    padding: 20px;
+  }
+
+  .v0-welcome-header h1 {
+    font-size: 22px;
+  }
+
+  .v0-welcome-icon {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* Reduce spacing between paragraphs */
+.border p {
+	margin-bottom: 0.3rem; /* Adjust the margin between paragraphs */
+}
+
+/* Optionally, you can also reduce the padding of the card */
+.border {
+	padding: 0.7rem; /* Adjust the padding inside the bordered box */
+}
+
+/* Modal Body Scroll */
+.modal-body {
+	max-height: 400px; /* Set max height of the modal body */
+	overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.modal-body .border {
+	border: 1px solid #ddd; /* Faint border */
+	background-color: #f9f9f9; /* Light background color */
+}
+
+.modal-body .border p {
+	font-size: 14px;
+	color: #555;
+}
+
+.modal-footer button {
+	font-weight: bold;
+}
+
+.modal-body .list-group-item a {
+	font-weight: bold;
+	color: #007bff; /* Link color */
+}
+
+.modal-body .text-muted {
+	font-size: 14px;
+}
+

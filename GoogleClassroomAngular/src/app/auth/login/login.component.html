@@ -1,0 +1,69 @@
+<div class="v0-auth-container">
+  <div class="v0-auth-card">
+    <div class="v0-auth-header">
+      <i class="bi bi-box-arrow-in-right v0-auth-icon"></i>
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue to Group Chat</p>
+    </div>
+    
+    <form 
+      #loginForm="ngForm"
+      (ngSubmit)="loginUser()"
+      class="v0-auth-form"
+    >
+      <!-- Email Field -->
+      <div class="v0-form-group">
+        <label for="email" class="v0-form-label">Email</label>
+        <div class="v0-input-wrapper">
+          <i class="bi bi-envelope v0-input-icon"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+            class="v0-form-control"
+            placeholder="Enter your email"
+          />
+        </div>
+      </div>
+
+      <!-- Password Field -->
+      <div class="v0-form-group">
+        <label for="password" class="v0-form-label">Password</label>
+        <div class="v0-input-wrapper">
+          <i class="bi bi-lock v0-input-icon"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="formData.password"
+            required
+            class="v0-form-control"
+            placeholder="Enter your password"
+          />
+        </div>
+      </div>
+
+      <!-- Error message -->
+      <div class="v0-form-error-message" *ngIf="errorMessage">
+        <i class="bi bi-exclamation-triangle"></i>
+        {{ errorMessage }}
+      </div>
+
+      <!-- Submit button -->
+      <button
+        type="submit"
+        class="v0-btn v0-btn-primary v0-btn-block"
+        [disabled]="loginForm.invalid"
+      >
+        <i class="bi bi-unlock"></i> Sign In
+      </button>
+      
+      <!-- Register link -->
+      <div class="v0-auth-footer">
+        <p>Don't have an account? <a routerLink="/auth/register" class="v0-auth-link">Create Account</a></p>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+/* Assignment Modal Styles */
+.assignmentModal-header {
+	padding: 12px 16px;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: #fff;
+}
+
+.assignmentModal-title {
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: #202124;
+}
+
+.assignmentModal-assign-btn {
+	background-color: #1a73e8;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 6px 16px;
+	font-weight: 500;
+}
+
+.assignmentModal-assign-btn:hover {
+	color: white;
+	background-color: #226ac9;
+}
+
+.assignmentModal-assign-btn:disabled {
+	background-color: #b0c4de;
+	color: #ffffff;
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.assignmentModal-options-btn {
+	background-color: #1a73e8;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 6px 12px;
+}
+
+.assignmentModal-options-btn:hover {
+	background-color: #1765cc;
+}
+
+.assignmentModal-body {
+	padding: 24px;
+	background-color: #f8f9fa;
+	height: calc(100vh - 60px);
+	overflow-y: auto;
+}
+
+.assignmentModal-form-container {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 24px;
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px
+		rgba(60, 64, 67, 0.15);
+}
+
+.assignmentModal-title-input {
+	border: none;
+	border-bottom: 1px solid #e0e0e0;
+	border-radius: 0;
+	padding: 8px 0;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.assignmentModal-title-input:focus {
+	box-shadow: none;
+	border-color: #1a73e8;
+}
+
+.assignmentModal-instructions {
+	border: none;
+	padding: 8px 0;
+	resize: none;
+}
+
+.assignmentModal-instructions:focus {
+	box-shadow: none;
+}
+
+.assignmentModal-formatting-toolbar {
+	border-top: 1px solid #e0e0e0;
+	padding-top: 16px;
+}
+
+.assignmentModal-toolbar-btn {
+	color: #5f6368;
+	padding: 6px 12px;
+	border: none;
+}
+
+.assignmentModal-toolbar-btn:hover {
+	background-color: #f1f3f4;
+}
+
+.assignmentModal-attachments {
+	border-top: 1px solid #e0e0e0;
+	padding-top: 16px;
+}
+
+.assignmentModal-attachment-option {
+	cursor: pointer;
+}
+
+.assignmentModal-attachment-icon {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: #f1f3f4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 8px;
+}
+
+.assignmentModal-attachment-icon i {
+	font-size: 1.25rem;
+}
+
+.assignmentModal-attachment-label {
+	font-size: 0.8rem;
+	color: #5f6368;
+}
+
+.assignmentModal-sidebar {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 24px;
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px
+		rgba(60, 64, 67, 0.15);
+}
+
+.assignmentModal-select {
+	border-color: #dadce0;
+}
+
+.assignmentModal-select:focus {
+	border-color: #1a73e8;
+	box-shadow: none;
+}
+
+.assignmentModal-students-select {
+	cursor: pointer;
+}
+
+.assignmentModal-rubric-btn {
+	border: 1px solid #dadce0;
+	color: #5f6368;
+	background-color: #fff;
+	width: 100%;
+	text-align: left;
+	padding: 6px 12px;
+}
+
+.assignmentModal-rubric-btn:hover {
+	background-color: #f1f3f4;
+}
+
+/* Class dropdown styles */
+.assignmentModal-class-dropdown {
+	position: relative;
+}
+
+.assignmentModal-class-dropdown-header {
+	background-color: #e8eaed;
+	color: #202124;
+	padding: 10px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.assignmentModal-class-dropdown-menu {
+	width: 100%;
+	padding: 0;
+	border-radius: 4px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	border: none;
+}
+
+.assignmentModal-class-item {
+	padding: 8px 16px;
+	border-bottom: 1px solid #f1f3f4;
+}
+
+.assignmentModal-class-item:hover {
+	background-color: #f0f0f0;
+}
+
+.assignmentModal-class-item:last-child {
+	border-bottom: none;
+}
+
+.assignmentModal-class-avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: 500;
+	margin-right: 12px;
+}
+
+.assignmentModal-class-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.assignmentModal-class-name {
+	font-weight: 500;
+	color: #202124;
+}
+
+.assignmentModal-class-section {
+	font-size: 0.8rem;
+	color: #5f6368;
+}
+
+.form-check-input:checked {
+	background-color: #1a73e8;
+	border-color: #1a73e8;
+}
+
+.form-check-label {
+	width: 100%;
+	cursor: pointer;
+}
+/* Add these styles to your existing CSS */
+.assignmentModal-class-item input[disabled]+label {
+	opacity: 0.8;
+	cursor: default;
+}
+
+.assignmentModal-class-avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: 500;
+	margin-right: 12px;
+}
+
+.student-avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+}
+
+.student-item {
+	transition: background-color 0.2s;
+}
+
+.student-item:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+}
+
+.student-item .form-check {
+	width: 100%;
+}
+
+.student-item .form-check-label {
+	width: 100%;
+	cursor: pointer;
+}
+
+/* Style for the student selector in the assignment modal */
+.student-selector {
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.student-selector:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.disabledDiv {
+	opacity: 0.5; /* Optional, to show it's disabled */
+	pointer-events: none; /* Disables clicking */
+}

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/* Google Classroom Sidebar Styles */
+.sb-sidenav {
+	height: 100%;
+	background-color: #fff;
+	color: #3c4043;
+	width: 228px;
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px
+		rgba(60, 64, 67, 0.15);
+}
+
+.sb-sidenav-menu {
+	padding: 12px 0;
+}
+
+.sb-sidenav-menu .nav {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+
+.sb-sidenav-menu-heading {
+	padding: 16px 24px 8px;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	color: #5f6368;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	padding: 12px 24px;
+	color: #3c4043;
+	border-radius: 0 24px 24px 0;
+	margin-right: 12px;
+	font-weight: 500;
+	font-size: 14px;
+	text-decoration: none;
+	transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+	background-color: #f1f3f4;
+	color: #202124;
+}
+
+.nav-link.active {
+	background-color: #e8f0fe;
+	color: #1a73e8;
+}
+
+.sb-nav-link-icon {
+	display: inline-flex;
+	margin-right: 16px;
+	width: 24px;
+	justify-content: center;
+}
+
+.sb-sidenav-collapse-arrow {
+	margin-left: auto;
+	transition: transform 0.2s;
+}
+
+.nav-link:not(.collapsed) .sb-sidenav-collapse-arrow {
+	transform: rotate(180deg);
+}
+
+.sb-sidenav-menu-nested .nav-link {
+	padding-left: 40px;
+	font-weight: 400;
+}
+
+.sb-sidenav-footer {
+	padding: 16px 24px;
+	border-top: 1px solid #e0e0e0;
+	background-color: #fff;
+	position: sticky;
+	bottom: 0;
+}
+
+.sb-sidenav-footer .small {
+	font-size: 12px;
+	color: #5f6368;
+	margin-bottom: 4px;
+}
+
+/* Class icon styling */
+.class-icon {
+	display: inline-flex;
+	width: 24px;
+	height: 24px;
+	margin-right: 12px;
+	align-items: center;
+	justify-content: center;
+}
+
+.class-icon i {
+	font-size: 10px;
+}
+
+/* Google Classroom Logo */
+.classroom-logo {
+	display: flex;
+	align-items: center;
+	padding: 16px 24px;
+	margin-bottom: 8px;
+}
+
+.classroom-logo img {
+	height: 32px;
+	margin-right: 8px;
+}
+
+.classroom-logo span {
+	font-size: 20px;
+	font-weight: 500;
+	color: #5f6368;
+}
+
+/* Nested menu styling */
+.sb-sidenav-menu-nested {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+/* User info in footer */
+.user-info {
+	display: flex;
+	align-items: center;
+}
+
+.user-info i {
+	font-size: 18px;
+	margin-right: 12px;
+	color: #5f6368;
+}
+
+.user-name {
+	font-size: 14px;
+	font-weight: 500;
+	color: #3c4043;
+}

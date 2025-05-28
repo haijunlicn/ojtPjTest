@@ -1,0 +1,452 @@
+@charset "UTF-8";
+
+/* Smaller Text for Announcement */
+.announcement-post-card p {
+	font-size: 0.8rem; /* Smaller font for general paragraphs */
+}
+
+.announcement-post-card .fw-bold {
+	font-size: 0.9rem; /* Slightly larger font size for bold text */
+}
+
+.announcement-post-card .fst-italic {
+	font-size: 0.8rem; /* Smaller font for italic text */
+}
+
+.announcement-post-card ul {
+	font-size: 0.7rem; /* Smaller font for list items */
+}
+
+.announcement-post-card ul li {
+	line-height: 1.4; /* Adjust line height for list items */
+}
+
+/* Announcement Post Card Styles */
+.announcement-post-card {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	margin-bottom: 8px;
+	overflow: hidden;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	padding-left: 4px;
+}
+
+.announcement-post-card .card-header {
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	padding: 8px 12px;
+}
+
+.announcement-avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #4285F4;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 12px;
+}
+
+.announcement-post-card .card-body {
+	padding: 8px 12px;
+}
+
+.attachment-item {
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	height: 60px;
+	background-color: #f8f9fa;
+}
+
+.attachment-icon {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f1f1f1;
+	color: #5f6368;
+	font-size: 15px;
+}
+
+.image-icon {
+	padding: 0;
+	overflow: hidden;
+}
+
+.image-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.dark-icon {
+	background-color: #202124;
+	color: white;
+}
+
+.attachment-details {
+	padding: 6px;
+	overflow: hidden;
+}
+
+.attachment-title {
+	font-weight: 500;
+	font-size: 15px;
+	margin-bottom: 1px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.attachment-subtitle {
+	color: #5f6368;
+	font-size: 15px;
+}
+
+.comment-input {
+	border-radius: 16px;
+	padding-left: 8px;
+	border: 1px solid #e0e0e0;
+	background-color: #f1f3f4;
+	font-size: 14px;
+}
+
+.comment-input:focus {
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-footer {
+	margin-left: 12px;
+	padding: 12px;
+	background-color: #fff;
+	border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-footer .d-flex {
+	align-items: center;
+}
+
+.card-footer .btn {
+	font-size: 14px;
+}
+
+/* Add these styles to your existing CSS or in a style tag */
+#filePreviewContent {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#downloadFileLink {
+	transition: all 0.2s ease;
+}
+
+#downloadFileLink:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* File type specific styling */
+.file-preview-pdf {
+	background-color: #f8f2f2;
+}
+
+.file-preview-image {
+	background-color: #f2f8f2;
+}
+
+.file-preview-text {
+	background-color: #f2f2f8;
+}
+
+/* Loading animation */
+@
+keyframes pulse { 0% {
+	opacity: 0.6;
+}
+
+50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+}
+#filePreviewPlaceholder .spinner-border {
+	animation: pulse 1.5s infinite ease-in-out, spinner-border 0.75s linear
+		infinite;
+}
+
+/* Make attachment items clickable */
+.attachment-item {
+	cursor: pointer;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.attachment-item:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image icon styling */
+.image-icon {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+
+.image-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Modal styling */
+#previewImage {
+	max-height: 80vh;
+}
+
+.modal-body.p-0 {
+	padding: 0 !important;
+}
+
+/* Video preview styling */
+#previewVideo {
+	max-height: 70vh;
+	background-color: #000;
+}
+
+#videoPreviewThumbnail {
+	position: relative;
+}
+
+#videoPreviewThumbnail img {
+	max-height: 300px;
+	object-fit: contain;
+	background-color: #f0f0f0;
+}
+
+#playVideoBtn {
+	transition: all 0.2s ease;
+	opacity: 0.9;
+}
+
+#playVideoBtn:hover {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Audio player styling */
+#audioPreviewContent {
+	background-color: #f8f8f8;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+#audioPlayer {
+	max-width: 100%;
+	margin-top: 15px;
+}
+
+/* Text preview styling */
+#textPreviewContent {
+	font-family: monospace;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+/* File preview improvements */
+#filePreviewContent {
+	transition: all 0.3s ease;
+}
+
+.file-preview-loading {
+	background-color: #f9f9f9;
+}
+
+/* Download button enhancement */
+#downloadFileLink, #downloadVideoLink, #downloadImageLink {
+	transition: all 0.2s ease;
+}
+
+#downloadFileLink:hover, #downloadVideoLink:hover, #downloadImageLink:hover
+	{
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
